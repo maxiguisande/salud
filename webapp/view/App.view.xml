@@ -1,0 +1,6 @@
+<mvc:View controllerName="com.BASA.Salud.controller.App" xmlns:mvc="sap.ui.core.mvc" xmlns:html="http://www.w3.org/1999/xhtml"
+	displayBlock="true" xmlns="sap.m">
+	<App id="idAppControl">
+		<mvc:XMLView viewName="com.BASA.Salud.view.Navigation"></mvc:XMLView>
+	</App>
+</mvc:View>
