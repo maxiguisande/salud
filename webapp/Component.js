@@ -3,7 +3,7 @@ sap.ui.define([
 	"sap/ui/Device",
 	"com/BASA/Salud/model/models",
 	"com/BASA/Salud/utils/FioriComponentHelper"
-], function (UIComponent, Device, models, FioriComponent) {
+], function (UIComponent, Device, models, FioriComponentHelper) {
 	"use strict";
 
 	return UIComponent.extend("com.BASA.Salud.Component", {
@@ -26,8 +26,8 @@ sap.ui.define([
 
 			// set the device model
 			this.setModel(models.createDeviceModel(), "device");
-
-			FioriComponent.setComponent(this);
+			
+			FioriComponentHelper.setComponent(this);
 		}
 	});
 });

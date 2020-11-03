@@ -9,7 +9,7 @@
 					</layoutData>
 				</Button>
 				<Title width="100%" textAlign="Center" text="{i18n>title}"></Title>
-				<Button id="sideCameraButton" icon="sap-icon://camera" type="Transparent" press="onCollapseExpandPress">
+				<Button id="sideCameraButton" icon="sap-icon://camera" type="Transparent" press="onScanQRBack">
 					<layoutData>
 						<OverflowToolbarLayoutData priority="NeverOverflow"/>
 					</layoutData>
@@ -20,10 +20,10 @@
 			<tnt:SideNavigation id="sideNavigation" expanded="true" selectedKey="{/selectedKey}" itemSelect="onItemSelect">
 				<tnt:item>
 					<tnt:NavigationList>
-						<tnt:NavigationListItem text="{i18n>evolucion}" expanded="false" icon="sap-icon://accidental-leave" key="page1"></tnt:NavigationListItem>
+						<tnt:NavigationListItem text="{i18n>admMedicamentos}" expanded="false" icon="sap-icon://accidental-leave" key="page1"></tnt:NavigationListItem>
 						<tnt:NavigationListItem text="{i18n>balanceHidrico}" expanded="false" icon="sap-icon://compare-2" key="page2"></tnt:NavigationListItem>
 						<tnt:NavigationListItem text="{i18n>signosVitales}" expanded="false" icon="sap-icon://electronic-medical-record" key="page3"></tnt:NavigationListItem>
-						<tnt:NavigationListItem text="{i18n>admMedicamentos}" expanded="false" icon="sap-icon://syringe" key="page4"></tnt:NavigationListItem>
+						<tnt:NavigationListItem text="{i18n>evolucion}" expanded="false" icon="sap-icon://syringe" key="page4"></tnt:NavigationListItem>
 						<tnt:NavigationListItem text="{i18n>otrasIndicaciones}" expanded="false" icon="sap-icon://tags" key="page4"></tnt:NavigationListItem>
 					</tnt:NavigationList>
 				</tnt:item>
@@ -33,17 +33,19 @@
 			<NavContainer id="pageContainer" initialPage="page1">
 				<pages>
 					<ScrollContainer id="page1" horizontal="true" vertical="true" height="100%">
-						<mvc:XMLView viewName="com.BASA.Salud.view.Header.Header"></mvc:XMLView>
-						<!--<mvc:XMLView viewName="com.BASA.Salud.view.NavigationMenu.Menu1"></mvc:XMLView>-->
+						<mvc:XMLView viewName="com.BASA.Salud.view.navigationMenu.admMedicamentos"></mvc:XMLView>
 					</ScrollContainer>
 					<ScrollContainer id="page2" horizontal="true" vertical="true" height="100%">
-						<!--<mvc:XMLView viewName="com.BASA.Salud.view.NavigationMenu.Menu2"></mvc:XMLView>-->
+						<mvc:XMLView viewName="com.BASA.Salud.view.navigationMenu.balanceHidrico"></mvc:XMLView>
 					</ScrollContainer>
 					<ScrollContainer id="page3" horizontal="true" vertical="true" height="100%">
-						<!--<mvc:XMLView viewName="com.BASA.Salud.view.NavigationMenu.Menu3"></mvc:XMLView>-->
+						<mvc:XMLView viewName="com.BASA.Salud.view.navigationMenu.signosVitales"></mvc:XMLView>
 					</ScrollContainer>
 					<ScrollContainer id="page4" horizontal="true" vertical="true" height="100%">
-						<!--<mvc:XMLView viewName="com.BASA.Salud.view.NavigationMenu.Menu4"></mvc:XMLView>-->
+						<mvc:XMLView viewName="com.BASA.Salud.view.navigationMenu.evolucion"></mvc:XMLView>
+					</ScrollContainer>
+					<ScrollContainer id="page5" horizontal="true" vertical="true" height="100%">
+						<mvc:XMLView viewName="com.BASA.Salud.view.navigationMenu.otrasIndicaciones"></mvc:XMLView>
 					</ScrollContainer>
 				</pages>
 			</NavContainer>

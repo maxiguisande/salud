@@ -1,0 +1,43 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.BASA.Salud.controller.admMedicamentos"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<ObjectHeader responsive="true" fullScreenOptimized="false" binding="{Cabecera>/Cabecera}" icon="{Cabecera>iconURL}"
+		iconAlt="{Cabecera>fullname}" intro="{Cabecera>detalle}"
+		title="{Cabecera>fullname} | {Cabecera>sexo} | {Cabecera>edad} | {Cabecera>fecnac} | NPac {Cabecera>paciente}" titleActive="true"
+		backgroundDesign="Translucent">
+		<attributes>
+			<ObjectAttribute title="Episodio" text="{Cabecera>episodio}"/>
+			<ObjectAttribute title="" text="{Cabecera>estado}" textDirection="RTL"/>
+		</attributes>
+	</ObjectHeader>
+<!--	<Panel  expandable="false" expanded="false">
+			<content>
+	<MessageStrip id="messageStrip" class="sapUiTinyMarginBottom sapUiTinyMarginTop" text="" enableFormattedText="true" showIcon="false"></MessageStrip>
+	</content>
+		</Panel>-->
+	<VBox width="100%" fitContainer="false" class="sapUiNoContentPadding">
+
+				<Table mode="SingleSelectMaster" selectionChange="onOpenDialog"  items="{TableData>/TableData}">
+					<columns>
+						<Column >
+							<Text text="HPlan"/>
+						</Column>
+						<Column >
+							<Text text="Prescripcion"/>
+						</Column>
+						<Column>
+							<Text text="Estado"/>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem>
+							<cells>
+								<ObjectAttribute class="text-bold-azul" text="{TableModel>hplan}"/>
+								<ObjectAttribute text="{TableModel>desc}"/>
+								<ObjectAttribute text="{TableModel>status}"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+	
+	</VBox>
+</mvc:View>

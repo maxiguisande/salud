@@ -18,6 +18,11 @@ sap.ui.define([
 			toolPage.setSideExpanded(!toolPage.getSideExpanded());
 		},
 		
+		onScanQRBack: function () {
+			var oRoute = sap.ui.core.UIComponent.getRouterFor(this);
+			oRoute.navTo("lecturaQR");
+		},
+		
 		_setToggleButtonTooltip : function(bLarge) {
 			const toggleButton = this.getView().byId('sideNavigationToggleButton');
 			if (bLarge) {

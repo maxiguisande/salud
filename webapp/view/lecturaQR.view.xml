@@ -1,0 +1,40 @@
+<mvc:View controllerName="com.BASA.Salud.controller.lecturaQR" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core"
+	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:l="sap.ui.layout" xmlns="sap.m">
+	<Page enableScrolling="false">
+	<Panel backgroundDesign="Translucent">
+		<FlexBox justifyContent="Center" direction="Column" alignItems="Center">
+			<items>
+				<Image class="sapUiSmallMarginTop" densityAware="false" src="{path: '', formatter:'.formatter.getImageLogo'}">
+					<layoutData>
+						<FlexItemData growFactor="1"/>
+					</layoutData>
+				</Image>
+			</items>
+		</FlexBox>
+	</Panel>
+	<Panel backgroundDesign="Solid">
+		<FlexBox justifyContent="Center" alignItems="Center">
+			<items>
+				<core:Icon src="sap-icon://nurse" width="2rem"/>
+				<Text text=" BASA Salud - Mobile OSD" class="sapMH2FontSize"/>
+			</items>
+		</FlexBox>
+	</Panel>
+	<Panel backgroundDesign="Translucent">
+		<FlexBox  alignItems="Center" justifyContent="Center">
+			<items>
+				<Button class="QRButton" icon="sap-icon://bar-code" text="Lectura de QR - Paciente" press="onScanQR" type="Accept"/>
+			</items>
+		</FlexBox>
+	</Panel>
+	</Page>
+	<!--
+	<Page enableScrolling="false"  title="BASA Salud - Mobile OSD" titleLevel="H2" showFooter="false" >
+		<Panel backgroundDesign="Translucent">
+			<FlexBox alignItems="Start" justifyContent="Center">
+				<Button class="btnQR" icon="sap-icon://bar-code" text="Lectura de QR - Paciente" press="onScanQR"/>
+			</FlexBox>
+		</Panel>
+	</Page>
+	-->
+</mvc:View>

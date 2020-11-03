@@ -1,1 +1,122 @@
 /* Enter your custom styles here */
+
+.sapMOHRTitleIcon>.sapMOHRTitle {
+    margin-left: 2rem !important;
+}
+
+.QRButton>.sapMBtnInner {
+    height: 60px;
+    font-size: 30px;
+    padding-top: 0.5rem;
+    background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+
+.sapMBtn.QRButton .sapMBtnIcon {
+   padding-top: 0.5rem;
+}
+
+.sapMListHdr {
+    font-size: 0.8rem !important;
+    font-weight: bold !important;
+}
+
+.sapMPanelContent {
+    padding: 0 !important;
+}
+
+.titulo {
+    font-weight: bold !important;
+}
+
+.text-bold-azul span {
+    font-weight: bold !important;
+    color: blue !important;
+}
+
+.text-bold {
+    font-weight: bold !important;
+}
+
+.text-bold-naranja-c {
+    font-weight: bold !important;
+    color: orange !important;
+}
+
+.text-bold-azul-c {
+    font-weight: bold !important;
+    color: blue !important;
+}
+
+.text-bold-naranja span {
+    font-weight: bold !important;
+    color: orange !important;
+}
+
+.text-italic span {
+    font-style: italic !important;
+}
+
+.fuente-small span {
+    font-size: small !important;
+}
+
+.Cabecera {
+    color: #0070b1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.sapMSegB .sapMSegBBtn {
+    font-size: 0.9rem;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    width: 36.5% !important;
+}
+
+
+.sapMFlexBoxAlignContentStretch {
+    -webkit-align-content: stretch;
+    align-content: stretch;
+    padding: 21%;
+}
+
+/*
+.btnQR {
+    height: 20rem !important;
+}
+
+.sapMBtn .sapMBtnInner,
+.sapMBtn .sapMBtnContent {
+    display: block;
+    height: 20rem;
+    padding-top: 37%;
+}
+
+.sapMBtnIcon {
+    font-size: 4.375rem;
+    line-height: 8.375rem;
+    width: 2.375rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    vertical-align: top;
+    max-height: 3.375rem;
+    color: #346187;
+}
+
+.sapMBtnText>.sapMBtnIcon {
+    position: absolute;
+    top: 0;
+    left: 37%;
+}
+*/

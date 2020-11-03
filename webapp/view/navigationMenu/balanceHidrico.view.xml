@@ -1,6 +1,6 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.BASA.Salud.controller.Navigation"
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="com.BASA.Salud.controller.balanceHidrico"
 	xmlns:html="http://www.w3.org/1999/xhtml">
-	<ObjectHeader icon="sap-icon://person-placeholder" iconDensityAware="false" iconAlt="Denise Smith" imageShape="Circle"
+	<ObjectHeader icon="sap-icon://person-placeholder" iconDensityAware="false" iconAlt="Denise Smith" 
 		responsive="true" title="Romano Martinez, Federico" intro="M - 41 - 22.061.979" class="sapUiResponsivePadding--header">
 		<ObjectAttribute title="Nro Paciente" text="1000025" active="true"/>
 		<ObjectAttribute title="02MHCARD/02UE4PH0" text="Episodio: 10001112"/>

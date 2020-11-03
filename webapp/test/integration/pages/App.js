@@ -13,7 +13,7 @@ sap.ui.define([
 				//This is an example of an OPA action that needs to be fixed 
 				iDoMyAction: function () {
 					return this.waitFor({
-						id: "idAppControl",
+						id: "App",
 						viewName: sViewName,
 						actions: [function () {
 							//Implement your action here
@@ -27,7 +27,7 @@ sap.ui.define([
 
 				iShouldSeeTheApp: function () {
 					return this.waitFor({
-						id: "idAppControl",
+						id: "App",
 						viewName: sViewName,
 						success: function () {
 							Opa5.assert.ok(true, "The App view is displayed");
@@ -39,7 +39,7 @@ sap.ui.define([
 				//This is an example of an OPA assertion that needs to be fixed 
 				iDoMyAssertion: function () {
 					return this.waitFor({
-						id: "idAppControl",
+						id: "App",
 						viewName: sViewName,
 						success: function () {
 							Opa5.assert.ok(false, "Implement test");

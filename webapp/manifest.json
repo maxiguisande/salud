@@ -10,8 +10,17 @@
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
 		"sourceTemplate": {
-			"id": "ui5template.basicSAPUI5ApplicationProject",
-			"version": "1.38.11"
+			"id": "servicecatalog.connectivityComponentForManifest",
+			"version": "0.0.0"
+		},
+		"dataSources": {
+			"ZSALUD_SRV": {
+				"uri": "/sap/opu/odata/sap/ZSALUD_SRV/",
+				"type": "OData",
+				"settings": {
+					"localUri": "localService/metadata.xml"
+				}
+			}
 		}
 	},
 	"sap.ui": {
@@ -38,7 +47,8 @@
 	"sap.ui5": {
 		"rootView": {
 			"viewName": "com.BASA.Salud.view.App",
-			"type": "XML"
+			"type": "XML",
+			"id": "App"
 		},
 		"dependencies": {
 			"minUI5Version": "1.30.0",
@@ -58,6 +68,16 @@
 				"settings": {
 					"bundleName": "com.BASA.Salud.i18n.i18n"
 				}
+			},
+			"": {
+				"type": "sap.ui.model.odata.v2.ODataModel",
+				"settings": {
+					"defaultOperationMode": "Server",
+					"defaultBindingMode": "OneWay",
+					"defaultCountMode": "Request"
+				},
+				"dataSource": "ZSALUD_SRV",
+				"preload": true
 			}
 		},
 		"resources": {
@@ -74,7 +94,7 @@
 				"async": true,
 				"viewPath": "com.BASA.Salud.view",
 				"controlAggregation": "pages",
-				"controlId": "idAppControl",
+				"controlId": "App",
 				"clearControlAggregation": false
 			},
 			"routes": [
@@ -84,6 +104,20 @@
 					"target": [
 						"TargetApp"
 					]
+				},
+				{
+					"name": "lecturaQR",
+					"pattern": "lecturaQR",
+					"target": [
+						"lecturaQR"
+					]
+				},
+				{
+					"name": "Navigation",
+					"pattern": "Navigation",
+					"target": [
+						"Navigation"
+					]
 				}
 			],
 			"targets": {
@@ -92,6 +126,10 @@
 					"transition": "slide",
 					"clearControlAggregation": false,
 					"viewName": "App"
+				},
+				"lecturaQR": {
+					"viewType": "XML",
+					"viewName": "lecturaQR"
 				},
 				"Navigation": {
 					"viewType": "XML",
